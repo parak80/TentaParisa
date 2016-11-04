@@ -1,8 +1,13 @@
 ﻿@import url(../Content/bootstrap.min.css);
+@import url('../Content/themes/base/jquery-ui.min.css');
+@import url('../Content/themes/base/all.css');
 
 /* Components */
 @import url(Components/navbar.css);
 @import url(Components/carousel.css);
+@import url('Components/draggable.css');
+@import url('Components/droppable.css');
+@import url('Components/droppableTrash.css');
 
 /* Layout */
 @import url(Layout/layout.css);

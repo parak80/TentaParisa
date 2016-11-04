@@ -10,10 +10,29 @@ angular.module("mainModule")
             $routeProvider
 
                 .when("/", {
-                    templateUrl: "Views/Home.html",
-                    controller: "HomeController",
+                    templateUrl: "Views/Channels.html",
+                    controller: "ChannelsController",
                     caseInsensitiveMatch: true,
-                    activeTab: "Home"
+                    activeTab: "Channels"
+                })
+                  .when("/Admin", {
+                      templateUrl: "Views/Admin.html",
+                      controller: "AdminController",
+                      caseInsensitiveMatch: true,
+                      activeTab: "Admin"
+                  })
+
+                 .when("/Channels/:id", {
+                     templateUrl: "Views/Messages.html",
+                     controller: "ChannelController",
+                     caseInsensitiveMatch: true,
+                     activeTab: "Channels"
+                 })
+                .when("/Favourites", {
+                    templateUrl: "Views/Favourite.html",
+                    controller: "FavouriteController",
+                    caseInsensitiveMatch: true,
+                    activeTab: "Favourites"
                 });
         }
     ]);

@@ -1,0 +1,18 @@
+﻿.deletechannel {
+    width: 100%;
+    border: 1px inset rgb(182, 33, 33);
+    min-height: 250px;
+}
+
+.delete-channel-hover {
+    background-color: rgb(175, 102, 102);
+}
+
+h1.trash-icon {
+    font-size: 100px;
+    text-align: center;
+    position: relative;
+    top: 55px;
+    color: rgb(182, 33, 33);
+}
+

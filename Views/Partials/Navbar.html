@@ -6,11 +6,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">AngularBaseApp</a>
+            <a class="navbar-brand" href="/">
+                <img src="/Content/image/logo.jpg" style="height:45px; margin-top:-12px"/>
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li ng-class="{active: $route.current.activeTab == 'Home'}"><a href="/">Home</a></li>
+                <li ng-class="{active: $route.current.activeTab == 'Channels'}"><a href="/"><i class="glyphicon glyphicon-home"></i> Channels</a></li>
+                <li ng-class="{active: $route.current.activeTab == 'Admin'}"><a href="/Admin"><i class="glyphicon glyphicon-user"></i> Admin</a></li>
+                <li ng-class="{active: $route.current.activeTab == 'Favourites'}"><a href="/Favourites"><i class="glyphicon glyphicon-heart"></i> Favourite Channels</a></li>
             </ul>
             <!--<ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

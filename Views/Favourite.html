@@ -1,0 +1,13 @@
+﻿<div class="col-md-12">
+    <h2 ng-bind="title"></h2>
+</div>
+<div class="col-md-6" ng-repeat="channel in data.channels | filter: { subscribed: true } track by $index">
+    <h3> 
+        <span ng-bind="channel.name"></span>&nbsp;
+    </h3>
+    <unfavourite-button type="button"
+                        class="btn btn-success"
+                        ng-click="unsubscribe(channel.id)">
+        <span class="glyphicon glyphicon-heart"></span> unfavourite
+    </unfavourite-button>
+</div>

@@ -1,0 +1,9 @@
+﻿.note {
+    width: 300px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px 10px 10px 0;
+    background-color:#e3d01b;
+    border-radius: 5px;
+    z-index: 1;
+}

@@ -1,0 +1,27 @@
+﻿<div class="col-md-12">
+    <h1 ng-bind="title"></h1>
+</div>
+
+<div class="col-md-12">
+</div>
+
+<div class="col-md-12">
+    <table class="table">
+        <tr></tr>
+        <tr ng-repeat="channel in data.channels track by $index">
+            <td class="col-md-1" ng-bind="channel.name"></td>
+            <td class="col-md-1">
+                <button type="button"
+                        class="btn btn-primary"
+                        ng-click="go('/Channels/' + channel.id)">
+                    Open
+                </button>
+              
+                    <favourite-button ng-model="channel.subscribed" ng-click="subscribe(channel.id)">
+                    </favourite-button>
+            </td>
+        </tr>
+    </table>
+
+    
+</div>

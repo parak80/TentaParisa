@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html ng-app="mainModule">
 <head>
-    <title>AngularBaseApp</title>
+    <title></title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta charset="utf-8" />
@@ -9,14 +9,20 @@
 </head>
 <body ng-controller="MainController">
     <header ng-include="'Views/Partials/Navbar.html'"></header>
-
+    <!--<a>
+        <img src="/Content/image/background.jpg" class="myBackground"/>
+    </a>-->
     <main class="container-fluid no-whitespace" ng-view></main>
 
     <!-- 3rd party libs and frameworks -->
-    <script src="Scripts/jquery-3.1.0.min.js"></script>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="Scripts/angular-signalr-hub.js"></script>
+    
 
     <!-- Module -->
     <script src="Scripts/Modules/module.js"></script>
@@ -24,8 +30,25 @@
     <!-- Route -->
     <script src="Scripts/Routes/route.js"></script>
 
+    <!--Services-->
+    <script src="Scripts/Services/channel-api.service.js"></script>
+  
+    <!--Components-->
+    <script src="Scripts/Components/Draggable/draggable-channel.component.js"></script>
+    <script src="Scripts/Components/Droppable/droppable-channel.component.js"></script>
+    <script src="Scripts/Components/Droppable/delete-channel.component.js"></script>
+
+    <!--Directives-->
+    <script src="Scripts/Directives/FavouriteButton/favourite-button.directive.js"></script>
+
     <!-- Controllers -->
     <script src="Scripts/Controllers/main.controller.js"></script>
-    <script src="Scripts/Controllers/home.controller.js"></script>
+    <script src="Scripts/Controllers/channel.controller.js"></script>
+    <script src="Scripts/Controllers/channels.controller.js"></script>
+
+
+    <!--<script src="Scripts/Controllers/new-channel.controller.js"></script>-->
+    <script src="Scripts/Controllers/admin.controller.js"></script>
+    <script src="Scripts/Controllers/favourit.controller.js"></script>
 </body>
 </html>

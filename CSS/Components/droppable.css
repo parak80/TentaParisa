@@ -1,0 +1,9 @@
+﻿.drop-channel {
+    width: 100%;
+    min-height: 800px;
+    border: 1px solid black;
+}
+.ui-state-highlight {
+    background-color: #8eb9e0 !important;
+}
+

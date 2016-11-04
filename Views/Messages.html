@@ -1,0 +1,40 @@
+﻿
+<div class="col-md-12">
+    <h1 ng-bind="channel.name" class="text-warning admin-page"></h1>
+</div>
+
+<div class="col-md-12">
+    <table class="table">
+        <tr>
+            <!--<th>Body</th>-->
+        </tr>
+        <tr ng-repeat="message in channel.messages track by $index">
+            <td class="col-md-1">
+                <div>
+                    <h3 ng-bind="message.body" class="text-success"></h3>
+                    <h4>
+                        <span ng-bind="message.author" class="text-muted"></span>
+                        <span ng-bind="message.timeSent | date:'yyyy-MM-dd hh:mm:ss'" class="text-muted"></span>
+                    </h4>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+</div>
+<!--sending message-->
+<div>
+    <input type="text" ng-model="newMessage.author" placeholder="Your name..." style="height:40px; border-radius:3px; margin-left:20px" />
+    <br />
+    <br />
+    <textarea class="form-control" ng-model="newMessage.body" placeholder="Your message..."style="width:70%; height:80px; border-radius:3px; margin-left:20px"></textarea>
+    <span ng-model="newMessage.body" ng-bind="newMessage.timeSent | date:'yyyy-MM-dd hh:mm:ss'"></span>
+    <br />
+    <button type="submit"
+            class="btn btn-success"
+            ng-click="postMessage()"
+            style="margin-left:20px">
+        Send
+    </button>
+    <button type="reset" value="Reset" class="btn btn-default pull-left"  style="margin-left:20px"> Clear</button>
+</div>
